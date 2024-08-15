@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/si_sehat/screens/splash_screen.dart';
-import 'package:si_sehat/si_sehat/screens/login_screen.dart';
-import 'package:si_sehat/si_sehat/screens/on_boarding_screen.dart';
+import 'package:si_sehat/si_sehat/screens/splash/splash_screen.dart';
+import 'package:si_sehat/si_sehat/screens/login/login_screen.dart';
+import 'package:si_sehat/si_sehat/screens/on_boarding/on_boarding_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {

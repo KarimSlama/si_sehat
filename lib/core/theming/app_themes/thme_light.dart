@@ -38,7 +38,7 @@ ThemeData themeLight = ThemeData(
     color: Colors.black,
   ),
   textTheme: TextTheme(
-    bodyMedium: GoogleFonts.poppins(
+    bodyMedium: GoogleFonts.manrope(
         color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400),
   ),
   // tabBarTheme: const TabBarTheme(
