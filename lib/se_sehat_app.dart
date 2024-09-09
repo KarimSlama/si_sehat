@@ -16,9 +16,9 @@ class AppointmentApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         title: 'Se Sehat App',
-        onGenerateRoute: appRouter.generateRoute,
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.splashScreen,
+        onGenerateRoute: appRouter.generateRoute,
         theme: themeLight,
       ),
     );

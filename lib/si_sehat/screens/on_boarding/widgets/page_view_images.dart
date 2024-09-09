@@ -11,35 +11,7 @@ class PageViewImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    var pageController = PageController();
-    bool isLast = false;
-
-    return Column(
-      children: [
-        SizedBox(
-          width: double.infinity,
-          height: 600.h,
-          child: PageView.builder(
-            physics: const BouncingScrollPhysics(),
-            itemBuilder: (context, index) =>
-                OnBoardingItems(boardingModel: boarding[index]),
-            itemCount: boarding.length,
-          ),
-        ),
-        SmoothPageIndicator(
-          controller: pageController,
-          count: boarding.length,
-          effect: const ExpandingDotsEffect(
-            dotWidth: 12.0,
-            dotHeight: 12.0,
-            spacing: 5.0,
-            expansionFactor: 3.0,
-            dotColor: AppColors.blue,
-            activeDotColor: AppColors.lightBlack,
-          ),
-        ),
-      ],
-    );
+ return Placeholder();
 
   }
 }

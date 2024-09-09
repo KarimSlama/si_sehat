@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
+import 'package:si_sehat/si_sehat/screens/login/login_screen.dart';
 import 'package:si_sehat/si_sehat/screens/on_boarding/on_boarding_screen.dart';
 
 class SplashWidget extends StatefulWidget {
@@ -65,7 +66,7 @@ class _SplashWidgetState extends State<SplashWidget> {
               );
             },
             pageBuilder: (context, animation, secondaryAnimation) =>
-                const OnBoardingScreen(),
+                const LoginScreen(),
           ),
           (route) => false),
     );
