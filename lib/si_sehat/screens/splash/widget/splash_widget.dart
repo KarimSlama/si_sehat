@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
@@ -19,10 +20,10 @@ class _SplashWidgetState extends State<SplashWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-              child: SvgPicture.asset(height: 70, 'assets/icons/logo.svg')),
-          const Padding(
-            padding: EdgeInsetsDirectional.only(bottom: 20),
-            child: Align(
+              child: SvgPicture.asset(height: 70.h, 'assets/icons/logo.svg')),
+          Padding(
+            padding: EdgeInsetsDirectional.only(bottom: 20.w),
+            child: const Align(
               /// TODO: I'll change that later.
               child: Text(
                 AppString.siSehatMobileApp,
