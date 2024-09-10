@@ -20,13 +20,13 @@ ThemeData themeLight = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: AppColors.white,
     elevation: 0.0,
-    titleTextStyle: GoogleFonts.poppins(
+    titleTextStyle: GoogleFonts.manrope(
       color: Colors.black,
       fontSize: 18,
       fontWeight: FontWeight.w500,
     ),
     actionsIconTheme: const IconThemeData(color: Colors.black, size: 26),
-    toolbarTextStyle: GoogleFonts.poppins(
+    toolbarTextStyle: GoogleFonts.manrope(
       color: Colors.black,
       fontSize: 14,
     ),
@@ -39,7 +39,7 @@ ThemeData themeLight = ThemeData(
   ),
   textTheme: TextTheme(
     bodyMedium: GoogleFonts.manrope(
-        color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400),
+        color: Colors.black, fontSize: 14, fontWeight: FontWeight.w500),
   ),
   // tabBarTheme: const TabBarTheme(
   //   unselectedLabelColor: AppColors.grey,
