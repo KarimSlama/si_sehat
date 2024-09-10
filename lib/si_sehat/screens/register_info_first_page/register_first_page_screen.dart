@@ -7,7 +7,6 @@ import 'package:si_sehat/core/theming/app_strings/app_string.dart';
 import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/continue_with_apple.dart';
 import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/continue_with_google.dart';
 import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/continue_with_phone.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/register_first_page_img_text.dart';
 
 class RegisterFirstPageScreen extends StatelessWidget {
   const RegisterFirstPageScreen({super.key});
@@ -44,12 +43,12 @@ class RegisterFirstPageScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(AppString.iDontHaveAnAccount),
+                    const Text(AppString.dontHaveAnAccount),
                     TextButton(
                       onPressed: () {
-                        context.pushNamed(Routes.loginScreen);
+                        context.pushNamed(Routes.registerScreen);
                       },
-                      child: const Text(AppString.signIn),
+                      child: const Text(AppString.signUp),
                     )
                   ],
                 ),
