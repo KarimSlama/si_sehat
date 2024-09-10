@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:si_sehat/core/routing/app_router.dart';
 import 'package:si_sehat/core/routing/routes.dart';
+import 'core/theming/app_themes/thme_light.dart';
 
 class AppointmentApp extends StatelessWidget {
   final AppRouter appRouter;
@@ -15,9 +16,10 @@ class AppointmentApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         title: 'Se Sehat App',
-        onGenerateRoute: appRouter.generateRoute,
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.splashScreen,
+        onGenerateRoute: appRouter.generateRoute,
+        theme: themeLight,
       ),
     );
   }
