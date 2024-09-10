@@ -1,6 +1,9 @@
-# 🎨 System Design
+# 🎨 Cover App UI Design
+![Cover](https://github.com/user-attachments/assets/3962baf6-bc04-4693-964d-335ade18bf65)
 
-A new Flutter project.
+
+# 🎨 System Design
+Si_Sehat simplifies managing your healthcare appointments with a user-friendly interface designed for convenience and efficiency. Book, reschedule, or cancel doctor appointments effortlessly from your mobile device.![Uploading Opportunity Solution tree (Copy).jpg…]()
 
 ## Getting Started
 
