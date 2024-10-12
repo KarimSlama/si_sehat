@@ -7,7 +7,6 @@ import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
 import 'package:si_sehat/core/widgets/continue_with_apple.dart';
 import 'package:si_sehat/core/widgets/continue_with_google.dart';
-import 'package:si_sehat/core/widgets/text_form_widget.dart';
 import 'package:si_sehat/si_sehat/screens/login/widget/email_and_password.dart';
 import 'package:si_sehat/si_sehat/screens/login/widget/login_bloc_listener.dart';
 import 'package:si_sehat/si_sehat/screens/login/widget/login_button.dart';
@@ -17,8 +16,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var emailController = TextEditingController();
-    var passwordController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         leading: TextButton(
