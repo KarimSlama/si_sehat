@@ -43,21 +43,21 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 const Text(AppString.pleaseEnterAFormToContinueTheRegister),
                 SizedBox(height: 35.h),
-                textForm(
+                AppTextForm(
                   inputType: TextInputType.name,
                   controller: nameController,
                   label: AppString.fullName,
                   prefixIcon: IconBroken.Profile,
                 ),
                 SizedBox(height: 16.h),
-                textForm(
+                AppTextForm(
                   inputType: TextInputType.emailAddress,
                   controller: emailController,
                   label: AppString.email,
                   prefixIcon: IconBroken.Message,
                 ),
                 SizedBox(height: 16.h),
-                textForm(
+                AppTextForm(
                   inputType: TextInputType.visiblePassword,
                   controller: passwordController,
                   label: AppString.password,
@@ -65,7 +65,7 @@ class RegisterScreen extends StatelessWidget {
                   suffixIcon: IconBroken.Show,
                 ),
                 SizedBox(height: 16.h),
-                textForm(
+                AppTextForm(
                   inputType: TextInputType.visiblePassword,
                   controller: confirmPasswordController,
                   label: AppString.confirmPassword,

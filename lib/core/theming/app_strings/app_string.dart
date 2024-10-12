@@ -1,4 +1,5 @@
 class AppString {
+  static const String appTitle = 'Se Sehat App';
   static const String routesError = 'No Routes Define for';
   static const String siSehatMobileApp = 'Si Sehat Mobile App';
   static const String welcome = 'Welcome !';
@@ -28,7 +29,10 @@ class AppString {
   static const String dontHaveAnAccount = 'Don\'t have an account';
   static const String signUp = 'Sign Up';
   static const String register = 'Register';
-  static const String pleaseEnterAFormToContinueTheRegister = 'Please enter a form to continue the register';
+  static const String login = 'Login';
+  static const String forgotPassword = 'Forgot Password ?';
+  static const String pleaseEnterAFormToContinueTheRegister =
+      'Please enter a form to continue the register';
   static const String fullName = 'Full Name';
   static const String enterYourFullName = 'Enter your full name';
   static const String email = 'Email';
@@ -37,7 +41,9 @@ class AppString {
   static const String enterYourPassword = 'Enter your password';
   static const String confirmPassword = 'Confirm password';
   static const String confirmYourPassword = 'Confirm your password';
-
+  static const String welcomeBac = 'Welcome Bac';
+  static const String pleaseEnterAFormToLoginThisApp =
+      'Please enter a form to login this app';
   static const String
       bySigningUpOrLoggingInIAcceptTheAppsTermsOfServiceAndPrivacyPolicy =
       'By signing up or logging in, i accept the apps\nTerms of Service and Privacy Policy';
