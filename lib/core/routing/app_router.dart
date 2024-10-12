@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:si_sehat/core/routing/routes.dart';
+import 'package:si_sehat/core/service_locator/dependency_injection.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
+import 'package:si_sehat/si_sehat/screens/home/home_screen.dart';
+import 'package:si_sehat/si_sehat/screens/login/controller/login_cubit.dart';
 import 'package:si_sehat/si_sehat/screens/register/register_screen.dart';
 import 'package:si_sehat/si_sehat/screens/register_info_first_page/register_first_page_screen.dart';
 import 'package:si_sehat/si_sehat/screens/splash/splash_screen.dart';
@@ -24,11 +28,17 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => BlocProvider(
+              create : (context) => getIt<LoginCubit>(),
+              child: const LoginScreen()),
         );
       case Routes.registerScreen:
         return MaterialPageRoute(
           builder: (_) => const RegisterScreen(),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
         );
 
       default:

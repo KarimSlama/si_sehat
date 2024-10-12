@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/routing/routes.dart';
-import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/continue_with_apple.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/continue_with_google.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/widget/continue_with_phone.dart';
+import 'package:si_sehat/core/widgets/continue_with_apple.dart';
+import 'package:si_sehat/core/widgets/continue_with_google.dart';
+import 'package:si_sehat/core/widgets/continue_with_phone.dart';
 
 class RegisterFirstPageScreen extends StatelessWidget {
   const RegisterFirstPageScreen({super.key});
