@@ -39,7 +39,7 @@ Widget AppTextForm({
             borderRadius: BorderRadius.circular(radius),
             borderSide: const BorderSide(color: AppColors.grey, width: 1.0),
           ),
-          fillColor: AppColors.grey,
+          fillColor: AppColors.blue,
           labelText: label,
           hintText: hint,
           prefixIcon: Icon(
@@ -48,11 +48,11 @@ Widget AppTextForm({
           ),
           suffixIcon: suffixIcon != null
               ? IconButton(
-                  onPressed: () {
-                    suffixPressed!();
-                  },
-                  icon: Icon(suffixIcon, color: AppColors.darkGrey),
-                )
+            onPressed: () {
+              suffixPressed!();
+            },
+            icon: Icon(suffixIcon, color: AppColors.darkGrey),
+          )
               : null,
         ),
         onFieldSubmitted: (value) {
