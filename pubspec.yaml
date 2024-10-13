@@ -63,8 +63,8 @@ dependencies:
   easy_localization:
   intl:
 
-  # Splash_Screen
-  flutter_native_splash: 2.3.5
+  # Splash Screen
+  flutter_native_splash: ^2.3.5
 
   flutter_screenutil: ^5.9.3
 
@@ -79,6 +79,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  image_path_android: "assets/icons/logo.png"
+  image_path_ios: "assets/icons/logo.png"
+  android: true # can specify file name here e.g. "ic_launcher"
+  ios: true # can specify file name here e.g. "My-Launcher-Icon"
 
 
 

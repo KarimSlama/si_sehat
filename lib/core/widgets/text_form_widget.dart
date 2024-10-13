@@ -48,11 +48,11 @@ Widget AppTextForm({
           ),
           suffixIcon: suffixIcon != null
               ? IconButton(
-            onPressed: () {
-              suffixPressed!();
-            },
-            icon: Icon(suffixIcon, color: AppColors.darkGrey),
-          )
+                  onPressed: () {
+                    suffixPressed!();
+                  },
+                  icon: Icon(suffixIcon, color: AppColors.darkGrey),
+                )
               : null,
         ),
         onFieldSubmitted: (value) {

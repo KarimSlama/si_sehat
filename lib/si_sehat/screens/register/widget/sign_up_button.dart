@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
+import 'package:si_sehat/si_sehat/screens/register/controller/register_cubit.dart';
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({super.key});
@@ -12,6 +14,7 @@ class SignUpButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
+        validateThenDoRegister(context);
       },
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(AppColors.grey),
@@ -26,8 +29,16 @@ class SignUpButton extends StatelessWidget {
         ),
       ),
       child: Text(AppString.signUp,
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: AppColors.light, fontWeight: FontWeight.w800 )),
+          style: Theme.of(context)
+              .textTheme
+              .bodyMedium
+              ?.copyWith(color: AppColors.light, fontWeight: FontWeight.w800)),
     );
+  }
+
+  void validateThenDoRegister(BuildContext context) {
+    if (context.read<RegisterCubit>().formKey.currentState!.validate()) {
+      context.read<RegisterCubit>().emitRegisterState();
+    }
   }
 }

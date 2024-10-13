@@ -18,7 +18,7 @@ class AppointmentApp extends StatelessWidget {
       child: MaterialApp(
         title: AppString.appTitle,
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.splashScreen,
+        initialRoute: Routes.registerFirstPageScreen,
         onGenerateRoute: appRouter.generateRoute,
         theme: themeLight,
       ),
