@@ -4,10 +4,12 @@ import 'package:si_sehat/core/service_locator/dependency_injection.dart';
 import 'package:si_sehat/se_sehat_app.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() async{
+void main() async {
   setUpGetIt();
   await ScreenUtil.ensureScreenSize();
-  runApp(AppointmentApp(
-    appRouter: AppRouter(),
-  ));
+  runApp(
+    AppointmentApp(
+      appRouter: AppRouter(),
+    ),
+  );
 }
