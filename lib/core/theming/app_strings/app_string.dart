@@ -36,12 +36,15 @@ class AppString {
   static const String fullName = 'Full Name';
   static const String enterYourFullName = 'Enter your full name';
   static const String email = 'Email';
+  static const String phone = 'Phone';
   static const String enterYourEmail = 'Enter your Email';
   static const String password = 'Password';
   static const String enterYourPassword = 'Enter your password';
   static const String confirmPassword = 'Confirm password';
   static const String confirmYourPassword = 'Confirm your password';
   static const String welcomeBac = 'Welcome Bac';
+  static const String helloCheersDesign = 'Hello Cheers Design 👋';
+  static const String welcomeToSiSehatMobileApps = 'Welcome to Si - Sehat Mobile Apps';
   static const String pleaseEnterAFormToLoginThisApp =
       'Please enter a form to login this app';
   static const String
