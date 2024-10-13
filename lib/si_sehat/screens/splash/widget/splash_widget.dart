@@ -5,9 +5,6 @@ import 'package:si_sehat/core/helpers/spacing.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
 import 'package:si_sehat/si_sehat/screens/login/login_screen.dart';
-import 'package:si_sehat/si_sehat/screens/on_boarding/on_boarding_screen.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/register_first_page_screen.dart';
-import 'package:si_sehat/si_sehat/screens/splash/splash_screen.dart';
 
 class SplashWidget extends StatefulWidget {
   const SplashWidget({super.key});

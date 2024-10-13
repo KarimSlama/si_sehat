@@ -5,7 +5,6 @@ import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/core/widgets/text_form_widget.dart';
 import 'package:si_sehat/si_sehat/screens/register/widget/register_bloc_listener.dart';
 import 'package:si_sehat/si_sehat/screens/register/widget/register_form.dart';
 import 'package:si_sehat/si_sehat/screens/register/widget/sign_up_button.dart';
@@ -15,10 +14,6 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var nameController = TextEditingController();
-    var emailController = TextEditingController();
-    var passwordController = TextEditingController();
-    var confirmPasswordController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         leading: TextButton(

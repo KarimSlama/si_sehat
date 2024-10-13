@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
 import 'package:si_sehat/si_sehat/screens/login/controller/login_cubit.dart';
-import 'package:si_sehat/si_sehat/screens/login/data/models/login_request_body.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key});
