@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032152582306",
+    "project_id": "si-sehat-5611d",
+    "storage_bucket": "si-sehat-5611d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032152582306:android:45db2a53be60916b5d6ffb",
+        "android_client_info": {
+          "package_name": "com.si_sehat.appointments.si_sehat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbM3RC9xc3p66pRfJL8LvoC3eS-I2EFm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
