@@ -7,8 +7,8 @@ platform :android do
     sh "flutter build apk --release --flavor Production --target lib/main_production.dart --no-tree-shake-icons"
     firebase_app_distribution(
       app: "1:1032152582306:android:45db2a53be60916b5d6ffb",
-      firebase_cli_token: "1//03DCKP27OE-25CgYIARAAGAMSNwF-L9IrfMm_bcE5T7_nSeC7QwB9JXzpOpWL1W1VUei2idu9lwVkvO3mPAhPHRM05psvzX7CHqs",
-#       android_artifact_type: "APK",
+      firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+      android_artifact_type: "APK",
       android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
       testers: "kslama499@gmail.com",
       release_notes: "Fastlane Firebase Distribution for Si-Sehat App",

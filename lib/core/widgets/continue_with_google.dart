@@ -12,12 +12,12 @@ class ContinueWithGoogle extends StatelessWidget {
     return TextButton(
       onPressed: () {},
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(AppColors.grey),
+        backgroundColor: WidgetStateProperty.all(AppColors.grey),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        minimumSize: MaterialStateProperty.all(
+        minimumSize: WidgetStateProperty.all(
           Size(double.infinity, 60.h),
         ),
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             side: BorderSide(
               color: AppColors.lightBlack,
@@ -39,10 +39,8 @@ class ContinueWithGoogle extends StatelessWidget {
             width: 10.w,
           ),
           Text(AppString.signInWithGoogle,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(color: AppColors.black, fontWeight: FontWeight.w600)),
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: AppColors.black, fontWeight: FontWeight.w600)),
         ],
       ),
     );

@@ -15,12 +15,12 @@ class LoginButton extends StatelessWidget {
         validateThenDoLogin(context);
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(AppColors.grey),
+        backgroundColor: WidgetStateProperty.all(AppColors.grey),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        minimumSize: MaterialStateProperty.all(
+        minimumSize: WidgetStateProperty.all(
           Size(double.infinity, 60.h),
         ),
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

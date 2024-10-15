@@ -30,7 +30,7 @@ class OnBoardingScreen extends StatelessWidget {
                 // if (value == boarding.length - 1) {
                 //   isLast = true;
                 // } else {
-                  // isLast = false;
+                // isLast = false;
                 // }
               },
               controller: pageController,
@@ -49,7 +49,7 @@ class OnBoardingScreen extends StatelessWidget {
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(AppColors.grey),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    minimumSize: MaterialStateProperty.all(
+                    minimumSize: WidgetStateProperty.all(
                       Size(155.w, 55.h),
                     ),
                     shape: WidgetStateProperty.all(
@@ -69,12 +69,12 @@ class OnBoardingScreen extends StatelessWidget {
                     // submit();
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(AppColors.blue),
+                    backgroundColor: WidgetStateProperty.all(AppColors.blue),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    minimumSize: MaterialStateProperty.all(
+                    minimumSize: WidgetStateProperty.all(
                       Size(155.w, 55.h),
                     ),
-                    shape: MaterialStateProperty.all(
+                    shape: WidgetStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
