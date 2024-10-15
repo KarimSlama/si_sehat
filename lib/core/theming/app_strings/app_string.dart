@@ -66,5 +66,7 @@ class AppString {
   static const String history = 'History';
   static const String chat = 'Chat';
   static const String account = 'Account';
+  static const String medicalSpecialties = 'Medical Specialties';
+  static const String wideSelectionOfDoctorSpecialties = 'Wide selection of doctor\'s specialties';
 
 }
