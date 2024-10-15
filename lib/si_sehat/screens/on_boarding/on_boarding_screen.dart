@@ -13,7 +13,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var pageController = PageController();
-    bool isLast = false;
+    // bool isLast = false;
     return Scaffold(
       body: Column(
         children: [
@@ -27,11 +27,11 @@ class OnBoardingScreen extends StatelessWidget {
               itemCount: boarding.length,
               onPageChanged: (value) {
                 // the state here is not active
-                if (value == boarding.length - 1) {
-                  isLast = true;
-                } else {
-                  isLast = false;
-                }
+                // if (value == boarding.length - 1) {
+                //   isLast = true;
+                // } else {
+                // isLast = false;
+                // }
               },
               controller: pageController,
             ),
@@ -47,12 +47,12 @@ class OnBoardingScreen extends StatelessWidget {
                     context.pushNamed(Routes.loginScreen);
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(AppColors.grey),
+                    backgroundColor: WidgetStateProperty.all(AppColors.grey),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    minimumSize: MaterialStateProperty.all(
+                    minimumSize: WidgetStateProperty.all(
                       Size(155.w, 55.h),
                     ),
-                    shape: MaterialStateProperty.all(
+                    shape: WidgetStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
@@ -69,12 +69,12 @@ class OnBoardingScreen extends StatelessWidget {
                     // submit();
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(AppColors.blue),
+                    backgroundColor: WidgetStateProperty.all(AppColors.blue),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    minimumSize: MaterialStateProperty.all(
+                    minimumSize: WidgetStateProperty.all(
                       Size(155.w, 55.h),
                     ),
-                    shape: MaterialStateProperty.all(
+                    shape: WidgetStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),

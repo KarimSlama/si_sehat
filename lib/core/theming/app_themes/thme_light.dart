@@ -7,13 +7,11 @@ ThemeData themeLight = ThemeData(
   brightness: Brightness.light,
   colorScheme: const ColorScheme.light(
     primary: AppColors.blue,
-    secondary: Colors.white,
-    background: Colors.white,
+    secondary: Colors.black,
     error: Colors.red,
-    onPrimary: Colors.white,
-    onSecondary: Colors.white,
-    onSurface: Colors.white,
-    onBackground: Colors.white,
+    onPrimary: AppColors.darkGrey,
+    onSecondary: AppColors.darkGrey,
+    onSurface: AppColors.darkGrey,
     onError: Colors.white,
     brightness: Brightness.light,
   ),
@@ -41,8 +39,4 @@ ThemeData themeLight = ThemeData(
     bodyMedium: GoogleFonts.manrope(
         color: Colors.black, fontSize: 14, fontWeight: FontWeight.w500),
   ),
-  // tabBarTheme: const TabBarTheme(
-  //   unselectedLabelColor: AppColors.grey,
-  //   labelColor: Colors.black,
-  // )
 );

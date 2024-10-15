@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.3+1
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
@@ -43,39 +43,50 @@ dependencies:
   # Annotations for the freezed code-generator.
   freezed_annotation: ^2.4.1
   # For Dependency Injection
-  get_it: ^7.6.7
+  get_it: ^8.0.0
   # Automatically generate code for converting to and from JSON by annotating Dart classes.
-  json_serializable: ^6.8.0
+  json_serializable: ^6.7.1
   # Annotations for the JSON code-generator.
   json_annotation: ^4.9.0
   # A powerful HTTP networking package, supports Interceptors, Aborting and canceling a request, Custom adapters, Transformers, etc.
   dio: ^5.5.0+1
   # retrofit.dart is an dio client generator using source_gen and inspired by Chopper and Retrofit.
-  retrofit: ^4.1.0
+  retrofit: ^4.0.3
   # Retrofit generator is an dio client generator using source_gen and inspired by Chopper and Retrofit.
-  retrofit_generator: ^8.1.2
-  #  Pretty Dio logger is a Dio interceptor that logs network calls in a pretty, easy to read format.
+  retrofit_generator: ^9.1.2
+  # Flutter plugin for Firebase Core, enabling connecting to multiple Firebase apps.
+  firebase_core: ^3.3.0
+  # Pretty Dio logger is a Dio interceptor that logs network calls in a pretty, easy to read format.
   pretty_dio_logger: ^1.4.0
+  # A build system for Dart code generation and modular compilation.
+  build_runner: ^2.4.7
 
   # Localization
   easy_localization:
   intl:
 
-  # Splash_Screen
-  flutter_native_splash:
+  # Splash Screen
+  flutter_native_splash: ^2.3.5
 
   flutter_screenutil: ^5.9.3
 
-  google_fonts: ^5.1.0
-  flutter_launcher_icons: ^0.13.1
+  google_fonts: ^6.2.1
+  flutter_launcher_icons: ^0.14.1
   flutter_svg: ^2.0.7
   smooth_page_indicator: ^1.1.0
+  flutter_spinkit: ^5.2.1
 
   icon_broken: ^1.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  image_path_android: "assets/icons/logo.png"
+  image_path_ios: "assets/icons/logo.png"
+  android: true # can specify file name here e.g. "ic_launcher"
+  ios: true # can specify file name here e.g. "My-Launcher-Icon"
 
 
 

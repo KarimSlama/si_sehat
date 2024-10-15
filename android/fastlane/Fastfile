@@ -1,0 +1,17 @@
+default_platform(:android)
+
+platform :android do
+  desc "Lane for Android Firebase App Distribution"
+  lane :distribute do
+    sh "flutter clean"
+    sh "flutter build apk --release --flavor Production --target lib/main_production.dart --no-tree-shake-icons"
+    firebase_app_distribution(
+      app: "1:1032152582306:android:45db2a53be60916b5d6ffb",
+      firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+      android_artifact_type: "APK",
+      android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
+      testers: "kslama499@gmail.com",
+      release_notes: "Fastlane Firebase Distribution for Si-Sehat App",
+  )
+  end
+end

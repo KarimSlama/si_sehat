@@ -5,7 +5,8 @@ import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/core/widgets/text_form_widget.dart';
+import 'package:si_sehat/si_sehat/screens/register/widget/register_bloc_listener.dart';
+import 'package:si_sehat/si_sehat/screens/register/widget/register_form.dart';
 import 'package:si_sehat/si_sehat/screens/register/widget/sign_up_button.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -13,10 +14,6 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var nameController = TextEditingController();
-    var emailController = TextEditingController();
-    var passwordController = TextEditingController();
-    var confirmPasswordController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         leading: TextButton(
@@ -43,35 +40,7 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 const Text(AppString.pleaseEnterAFormToContinueTheRegister),
                 SizedBox(height: 35.h),
-                textForm(
-                  inputType: TextInputType.name,
-                  controller: nameController,
-                  label: AppString.fullName,
-                  prefixIcon: IconBroken.Profile,
-                ),
-                SizedBox(height: 16.h),
-                textForm(
-                  inputType: TextInputType.emailAddress,
-                  controller: emailController,
-                  label: AppString.email,
-                  prefixIcon: IconBroken.Message,
-                ),
-                SizedBox(height: 16.h),
-                textForm(
-                  inputType: TextInputType.visiblePassword,
-                  controller: passwordController,
-                  label: AppString.password,
-                  prefixIcon: IconBroken.Password,
-                  suffixIcon: IconBroken.Show,
-                ),
-                SizedBox(height: 16.h),
-                textForm(
-                  inputType: TextInputType.visiblePassword,
-                  controller: confirmPasswordController,
-                  label: AppString.confirmPassword,
-                  prefixIcon: IconBroken.Password,
-                  suffixIcon: IconBroken.Show,
-                ),
+                const RegisterFormWidget(),
                 SizedBox(height: 35.h),
                 const SignUpButton(),
                 SizedBox(height: 16.h),
@@ -87,6 +56,7 @@ class RegisterScreen extends StatelessWidget {
                     )
                   ],
                 ),
+                const RegisterBlocListener(),
               ],
             ),
           ),
