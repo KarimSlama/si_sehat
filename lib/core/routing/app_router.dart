@@ -43,6 +43,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
         );
+      case Routes.bookAnAppointment:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
+        );
 
       default:
         return MaterialPageRoute(

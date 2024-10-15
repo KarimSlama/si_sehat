@@ -4,16 +4,16 @@ class AppString {
   static const String siSehatMobileApp = 'Si Sehat Mobile App';
   static const String welcome = 'Welcome !';
   static const String
-      weWillAssistYouInEfficientlyAndEasilySchedulingAppointmentsWithDoctorsLetsGetStarted =
+  weWillAssistYouInEfficientlyAndEasilySchedulingAppointmentsWithDoctorsLetsGetStarted =
       'We will assist you in efficiently and easily scheduling appointments with doctors. Let\'s get started!';
   static const String chooseSpecialization = 'Choose Specialization';
   static const String
-      selectTheMedicalSpecializationYouNeedSoWeCanTailorYourExperience =
+  selectTheMedicalSpecializationYouNeedSoWeCanTailorYourExperience =
       'Select the medical specialization you need so we can tailor your experience.';
   static const String scheduleYourFirstAppointment =
       'Schedule Your First Appointment';
   static const String
-      chooseASuitableTimeAndDateToMeetYourPreferredDoctorBeginYourJourneyToBetterHealth =
+  chooseASuitableTimeAndDateToMeetYourPreferredDoctorBeginYourJourneyToBetterHealth =
       'Choose a suitable time and date to meet your preferred doctor. Begin your journey to better health!';
   static const String skip = 'Skip';
   static const String next = 'Next';
@@ -48,6 +48,23 @@ class AppString {
   static const String pleaseEnterAFormToLoginThisApp =
       'Please enter a form to login this app';
   static const String
-      bySigningUpOrLoggingInIAcceptTheAppsTermsOfServiceAndPrivacyPolicy =
+  bySigningUpOrLoggingInIAcceptTheAppsTermsOfServiceAndPrivacyPolicy =
       'By signing up or logging in, i accept the apps\nTerms of Service and Privacy Policy';
+  static const String mayYouAlwaysInAGoodCondition = 'May you always in a good condition';
+  static const String symptomsDiseases = 'symptoms, diseases...';
+  static const String hi = 'Hi';
+  static const String bookAnAppointment = 'Book an Appointment';
+  static const String findADoctorOrSpecialist = 'Find a Doctor or specialist';
+  static const String appointmentWithQR = 'Appointment with QR';
+  static const String queuingWithoutTheHustle = 'Queuing without the hustle';
+  static const String requestConsultation = 'Request Consultation';
+  static const String talkToSpecialist = 'Talk to specialist';
+  static const String locateAPharmacy = 'Locate a Pharmacy';
+  static const String purchaseMedicines = 'Purchase Medicines';
+  static const String home = 'Home';
+  static const String calendar = 'Calendar';
+  static const String history = 'History';
+  static const String chat = 'Chat';
+  static const String account = 'Account';
+
 }
