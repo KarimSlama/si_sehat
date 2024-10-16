@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:retrofit/http.dart';
+import 'package:retrofit/retrofit.dart';
 import 'package:si_sehat/core/networking/api_constants.dart';
 import 'package:si_sehat/si_sehat/screens/login/data/models/login_request_body.dart';
 import 'package:si_sehat/si_sehat/screens/login/data/models/login_response.dart';
