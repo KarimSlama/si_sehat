@@ -4,7 +4,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/controller/specialization_state.dart';
 import 'package:si_sehat/si_sehat/screens/register/controller/register_cubit.dart';
 import 'package:si_sehat/si_sehat/screens/register/controller/register_state.dart';
 

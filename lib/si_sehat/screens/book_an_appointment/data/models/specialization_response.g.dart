@@ -14,12 +14,6 @@ SpecializationResponse _$SpecializationResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$SpecializationResponseToJson(
-        SpecializationResponse instance) =>
-    <String, dynamic>{
-      'data': instance.specializationDataList,
-    };
-
 SpecializationData _$SpecializationDataFromJson(Map<String, dynamic> json) =>
     SpecializationData(
       id: (json['id'] as num?)?.toInt(),
@@ -28,13 +22,6 @@ SpecializationData _$SpecializationDataFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Doctors.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
-
-Map<String, dynamic> _$SpecializationDataToJson(SpecializationData instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'doctorsList': instance.doctorsList,
-    };
 
 Doctors _$DoctorsFromJson(Map<String, dynamic> json) => Doctors(
       id: (json['id'] as num?)?.toInt(),
@@ -49,17 +36,3 @@ Doctors _$DoctorsFromJson(Map<String, dynamic> json) => Doctors(
       startTime: json['start_time'] as String?,
       endTime: json['end_time'] as String?,
     );
-
-Map<String, dynamic> _$DoctorsToJson(Doctors instance) => <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'email': instance.email,
-      'phone': instance.phone,
-      'gender': instance.gender,
-      'address': instance.address,
-      'description': instance.description,
-      'degree': instance.degree,
-      'appoint_price': instance.appointPrice,
-      'start_time': instance.startTime,
-      'end_time': instance.endTime,
-    };
