@@ -20,10 +20,9 @@ class HomeScreen extends StatelessWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ///Just For Now Modify Later!
               Text(
                 'Hi Karim!',
-
-                ///Just For Now Modify Later!
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
@@ -67,21 +66,26 @@ class HomeScreen extends StatelessWidget {
             selectedItemColor: AppColors.blue,
             unselectedItemColor: AppColors.darkGrey,
             items: [
-          SalomonBottomBarItem(
-              icon: Icon(IconBroken.Home), title: Text('Home'),
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(IconBroken.Calendar), title: Text('Calendar'),
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(IconBroken.Paper), title: Text('History'),
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(IconBroken.Chat), title: Text('Chat'),
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(IconBroken.Profile), title: Text('Account'),
-          ),
-        ]));
+              SalomonBottomBarItem(
+                icon: Icon(IconBroken.Home),
+                title: Text('Home'),
+              ),
+              SalomonBottomBarItem(
+                icon: Icon(IconBroken.Calendar),
+                title: Text('Calendar'),
+              ),
+              SalomonBottomBarItem(
+                icon: Icon(IconBroken.Paper),
+                title: Text('History'),
+              ),
+              SalomonBottomBarItem(
+                icon: Icon(IconBroken.Chat),
+                title: Text('Chat'),
+              ),
+              SalomonBottomBarItem(
+                icon: Icon(IconBroken.Profile),
+                title: Text('Account'),
+              ),
+            ]));
   }
 }
