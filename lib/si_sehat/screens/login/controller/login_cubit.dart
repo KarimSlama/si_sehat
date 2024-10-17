@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:si_sehat/core/helpers/app_constants.dart';
 import 'package:si_sehat/core/helpers/shared_preference.dart';
 import 'package:si_sehat/si_sehat/screens/login/controller/login_state.dart';
