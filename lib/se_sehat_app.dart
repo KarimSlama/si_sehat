@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:si_sehat/core/helpers/app_constants.dart';
 import 'package:si_sehat/core/routing/app_router.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
@@ -18,7 +19,8 @@ class AppointmentApp extends StatelessWidget {
       child: MaterialApp(
         title: AppString.appTitle,
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homeScreen,
+        initialRoute:
+            isLoggedUser ? Routes.homeScreen : Routes.registerFirstPageScreen,
         onGenerateRoute: appRouter.generateRoute,
         theme: themeLight,
       ),

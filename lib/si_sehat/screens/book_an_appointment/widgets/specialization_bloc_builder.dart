@@ -21,8 +21,8 @@ class SpecializationBlocBuilder extends StatelessWidget {
             specializationLoading: () => setupLoading(),
             specializationSuccess: (specializationResponse) =>
                 setupSuccess(specializationResponse.specializationDataList),
-            specializationError: (errorHandler) =>
-                Text(' errorHandler.apiErrorModel.message'),
+            specializationError: (errorHandler) => Text(
+                ' errorHandler.apiErrorModel.message ${errorHandler.apiErrorModel.message}'),
             orElse: () {
               return SizedBox.shrink();
             },
@@ -31,7 +31,9 @@ class SpecializationBlocBuilder extends StatelessWidget {
   }
 }
 
-Widget setupSuccess(specializationList) =>
-    SpecializationListWidget(specializationDataList: specializationList ?? []);
+Widget setupSuccess(specializationList) {
+  return SpecializationListWidget(
+      specializationDataList: specializationList ?? []);
+}
 
 Widget setupLoading() => SpinKitSquareCircle(color: AppColors.blue);

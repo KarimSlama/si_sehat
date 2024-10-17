@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:si_sehat/core/helpers/app_constants.dart';
+import 'package:si_sehat/core/helpers/shared_preference.dart';
 import 'package:si_sehat/si_sehat/screens/login/controller/login_state.dart';
 import 'package:si_sehat/si_sehat/screens/login/data/models/login_request_body.dart';
 import 'package:si_sehat/si_sehat/screens/login/data/repo/login_repo.dart';
@@ -23,9 +25,14 @@ class LoginCubit extends Cubit<LoginState> {
     );
 
     response.when(success: (loginResponse) {
+      saveUserToke(loginResponse.userData!.token.toString());
       emit(LoginState.success(loginResponse));
     }, failure: (error) {
       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
     });
+  }
+
+  Future<void> saveUserToke(token) async {
+    await SharedPreference.setData(SharedPreferenceKey.userTokenKey, token);
   }
 }

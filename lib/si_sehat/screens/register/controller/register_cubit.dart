@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:si_sehat/core/helpers/app_constants.dart';
+import 'package:si_sehat/core/helpers/shared_preference.dart';
 import 'package:si_sehat/si_sehat/screens/register/controller/register_state.dart';
 import 'package:si_sehat/si_sehat/screens/register/data/models/register_request_body.dart';
 import 'package:si_sehat/si_sehat/screens/register/data/repo/register_rep.dart';
@@ -30,11 +32,16 @@ class RegisterCubit extends Cubit<RegisterState> {
 
     response.when(
       success: (registerResponse) {
+        saveUserToke(registerResponse.userData?.token ?? '');
         emit(RegisterState.success(registerResponse));
       },
       failure: (error) {
         emit(RegisterState.error(error: error.apiErrorModel.message ?? ''));
       },
     );
+  }
+
+  Future<void> saveUserToke(token) async {
+    await SharedPreference.setData(SharedPreferenceKey.userTokenKey, token);
   }
 }
