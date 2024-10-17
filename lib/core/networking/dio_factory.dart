@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:si_sehat/core/helpers/app_constants.dart';
 import 'package:si_sehat/core/helpers/shared_preference.dart';
 
