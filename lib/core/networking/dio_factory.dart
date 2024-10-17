@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:si_sehat/core/helpers/app_constants.dart';
+import 'package:si_sehat/core/helpers/shared_preference.dart';
 
 class DioFactory {
   /// private Constructor as I don't want to allow creating an instance of this class
@@ -23,6 +26,20 @@ class DioFactory {
     }
   }
 
+  static void addDioHeaders() {
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization':
+          "${SharedPreference.getString(SharedPreferenceKey.userTokenKey)}",
+    };
+  }
+
+  static void setTokenIntoHeaderAfterLogin(String token) {
+    dio?.options.headers = {
+      'Authorization': "${token}",
+    };
+  }
+
   static void addDioInterceptor() {
     dio?.interceptors.add(
       PrettyDioLogger(
@@ -31,12 +48,5 @@ class DioFactory {
         responseHeader: true,
       ),
     );
-  }
-
-  static void addDioHeaders() {
-    dio?.options.headers = {
-      'Accept': 'application/json',
-      'Authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzI5MTY1NDkwLCJleHAiOjE3MjkyNTE4OTAsIm5iZiI6MTcyOTE2NTQ5MCwianRpIjoidkhwWkpkWkNXcjl3OXpqSCIsInN1YiI6IjI0NDgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._o9chX4ib25y41hUE6dllYNoIrMr8MDfipZoMsC1www",
-    };
   }
 }

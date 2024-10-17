@@ -8,8 +8,8 @@ import 'package:si_sehat/se_sehat_app.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
-  setUpGetIt();
   await WidgetsFlutterBinding.ensureInitialized();
+  setUpGetIt();
   await ScreenUtil.ensureScreenSize();
   checkIfLoggedInUser();
   runApp(
