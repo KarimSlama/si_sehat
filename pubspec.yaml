@@ -60,6 +60,8 @@ dependencies:
   pretty_dio_logger: ^1.4.0
   # A build system for Dart code generation and modular compilation.
   build_runner: ^2.4.7
+  # Reading and Writing simple key-value pairs.
+  shared_preferences: ^2.3.2
 
   # Localization
   easy_localization:

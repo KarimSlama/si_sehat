@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/helpers/spacing.dart';
+import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
+import 'package:si_sehat/si_sehat/screens/home/home_screen.dart';
 import 'package:si_sehat/si_sehat/screens/login/login_screen.dart';
 
 class SplashWidget extends StatefulWidget {
@@ -53,29 +56,10 @@ class _SplashWidgetState extends State<SplashWidget> {
   void initState() {
     super.initState();
     navigateToHome().then(
-      (value) => Navigator.pushAndRemoveUntil(
-          context,
-          PageRouteBuilder(
-            transitionsBuilder:
-                (context, animation, secondaryAnimation, child) {
-              const begin = Offset(0.0, 1.0);
-              const end = Offset.zero;
-              const curve = Curves.ease;
-
-              final tween = Tween(begin: begin, end: end);
-              final curvedAnimation = CurvedAnimation(
-                parent: animation,
-                curve: curve,
-              );
-              return SlideTransition(
-                position: tween.animate(curvedAnimation),
-                child: child,
-              );
-            },
-            pageBuilder: (context, animation, secondaryAnimation) =>
-                const LoginScreen(),
-          ),
-          (route) => false),
+      (value) => context.pushNamedAndRemoveUntil(
+        Routes.loginScreen,
+        predicate: (route) => false,
+      ),
     );
   }
 }
