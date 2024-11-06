@@ -29,13 +29,13 @@ class DioFactory {
     dio?.options.headers = {
       'Accept': 'application/json',
       'Authorization':
-          "${SharedPreference.getString(SharedPreferenceKey.userTokenKey)}",
+          "Bearer ${SharedPreference.getSecureString(SharedPreferenceKey.userTokenKey)}",
     };
   }
 
   static void setTokenIntoHeaderAfterLogin(String token) {
     dio?.options.headers = {
-      'Authorization': "${token}",
+      'Authorization': "Bearer ${token}",
     };
   }
 

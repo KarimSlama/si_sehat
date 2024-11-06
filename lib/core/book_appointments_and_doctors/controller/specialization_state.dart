@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_response.dart';
 import 'package:si_sehat/core/networking/api_error_handler.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/data/models/specialization_response.dart';
 
 part 'specialization_state.freezed.dart';
 

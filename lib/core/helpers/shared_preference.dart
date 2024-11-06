@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreference {
@@ -63,5 +64,18 @@ class SharedPreference {
     debugPrint('SharedPrefHelper : getDouble with key : $key');
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     return sharedPreferences.getDouble(key) ?? 0.0;
+  }
+
+  /// Save The [Key] and the [Value] in Flutter Secure Storage
+  static setSecureString(key, value) async {
+    const flutterSecureStorage = FlutterSecureStorage();
+    debugPrint('SharedPrefHelper : saveSecureString with key : $key');
+    await flutterSecureStorage.write(key: key, value: value);
+  }
+
+  static getSecureString(key) async {
+    const flutterSecureStorage = FlutterSecureStorage();
+    debugPrint('SharedPrefHelper : saveSecureString with key : $key');
+    await flutterSecureStorage.read(key: key);
   }
 }

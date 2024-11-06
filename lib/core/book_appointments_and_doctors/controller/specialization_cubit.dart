@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/controller/specialization_state.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/data/repo/specialization_repo.dart';
+import 'package:si_sehat/core/book_appointments_and_doctors/controller/specialization_state.dart';
+import 'package:si_sehat/core/book_appointments_and_doctors/data/repo/specialization_repo.dart';
 
 class SpecializationCubit extends Cubit<SpecializationState> {
   final SpecializationRepo specializationRepo;

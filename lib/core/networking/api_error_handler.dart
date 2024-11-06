@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-import 'api_constants.dart';
+import 'register_api/register_api_constants.dart';
 import 'api_error_model.dart';
 
 

@@ -3,25 +3,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:icon_broken/icon_broken.dart';
 import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_model.dart';
 import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_response.dart';
-import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/helpers/separator.dart';
 import 'package:si_sehat/core/helpers/spacing.dart';
-import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/register_first_page_screen.dart';
 
-class SpecializationListWidget extends StatelessWidget {
+class SeeMoreSpecializationListWidget extends StatelessWidget {
   final List<SpecializationData?> specializationDataList;
 
-  const SpecializationListWidget(
+  const SeeMoreSpecializationListWidget(
       {super.key, required this.specializationDataList});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 400.h,
+    return Expanded(
       child: ListView.separated(
-        physics: NeverScrollableScrollPhysics(),
+        physics: BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.symmetric(vertical: 16.h),
@@ -40,28 +36,22 @@ class SpecializationListWidget extends StatelessWidget {
                     Text(
                       specializationDataList[index]?.name ??
                           'Ear, Nose & Throat',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium
-                          ?.copyWith(fontSize: 16, fontWeight: FontWeight.w600),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontSize: 16.sp, fontWeight: FontWeight.w600),
                     ),
                     verticalSpace(8),
                     Text(
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       AppString.wideSelectionOfDoctorSpecialties,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium
-                          ?.copyWith(fontSize: 12, fontWeight: FontWeight.w500),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontSize: 12.sp, fontWeight: FontWeight.w500),
                     ),
                   ],
                 ),
                 Spacer(),
                 IconButton(
-                    onPressed: () {
-                      context.pushNamed(Routes.doctorsWithSpecializationScreen);
-                    },
+                    onPressed: () {},
                     icon: Icon(
                       IconBroken.Arrow___Right_2,
                     )),
@@ -70,9 +60,7 @@ class SpecializationListWidget extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) => separator(),
-        itemCount: specializationDataList.length < 4
-            ? specializationDataList.length
-            : 4,
+        itemCount: specializationDataList.length,
       ),
     );
   }
