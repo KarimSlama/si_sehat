@@ -5,9 +5,10 @@ import 'package:si_sehat/core/book_appointments_and_doctors/controller/specializ
 import 'package:si_sehat/core/book_appointments_and_doctors/controller/specialization_state.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/si_sehat/screens/book_an_appointment/widgets/specialization_list_widget.dart';
+import 'package:si_sehat/si_sehat/screens/see_more/widgets/see_more_specialization_list_view.dart';
 
-class SpecializationBlocBuilder extends StatelessWidget {
-  const SpecializationBlocBuilder({super.key});
+class SeeMoreBlocBuilder extends StatelessWidget {
+  const SeeMoreBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class SpecializationBlocBuilder extends StatelessWidget {
 }
 
 Widget setupSuccess(specializationList) {
-  return SpecializationListWidget(
+  return SeeMoreSpecializationListWidget(
       specializationDataList: specializationList ?? []);
 }
 

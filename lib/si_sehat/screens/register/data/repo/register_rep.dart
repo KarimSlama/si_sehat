@@ -1,6 +1,6 @@
 import 'package:si_sehat/core/networking/api_error_handler.dart';
 import 'package:si_sehat/core/networking/api_result.dart';
-import 'package:si_sehat/core/networking/api_service.dart';
+import 'package:si_sehat/core/networking/register_api/api_service.dart';
 import 'package:si_sehat/si_sehat/screens/register/data/models/register_request_body.dart';
 import 'package:si_sehat/si_sehat/screens/register/data/models/register_response.dart';
 

@@ -25,7 +25,7 @@ class GridViewSelectionsWidget extends StatelessWidget {
             padding: const EdgeInsets.all(5),
             child: TextButton(
               onPressed: () {
-                context.pushNamed(Routes.bookAnAppointment);
+                context.pushNamed(Routes.bookAnAppointmentScreen);
               },
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(AppColors.grey),

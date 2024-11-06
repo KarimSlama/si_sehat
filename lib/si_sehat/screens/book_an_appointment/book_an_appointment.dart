@@ -5,7 +5,7 @@ import 'package:si_sehat/core/helpers/spacing.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
 import 'package:si_sehat/si_sehat/screens/book_an_appointment/widgets/specialization_bloc_builder.dart';
-import 'package:si_sehat/si_sehat/screens/home/widget/search_and_filter_widget.dart';
+import 'package:si_sehat/core/book_appointments_and_doctors/widgets/search_and_filter_widget.dart';
 
 class BookAnAppointment extends StatelessWidget {
   const BookAnAppointment({super.key});
@@ -47,7 +47,9 @@ class BookAnAppointment extends StatelessWidget {
             Align(
               alignment: AlignmentDirectional.bottomStart,
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.seeMoreScreen);
+                  },
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [

@@ -1,7 +1,7 @@
+import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_response.dart';
 import 'package:si_sehat/core/networking/api_error_handler.dart';
 import 'package:si_sehat/core/networking/api_result.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/data/models/specialization_response.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/data/network/specialization_api_service.dart';
+import 'package:si_sehat/core/networking/specialization_and_doctors_api/specialization_api_service.dart';
 
 class SpecializationRepo {
   final SpecializationApiService specializationApiService;
@@ -13,6 +13,7 @@ class SpecializationRepo {
       final response = await specializationApiService.getSpecializationData();
       return ApiResult.success(response);
     } catch (error) {
+      print('Specialization Repo Error is ${error.toString()}');
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }

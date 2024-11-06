@@ -62,7 +62,8 @@ dependencies:
   build_runner: ^2.4.7
   # Reading and Writing simple key-value pairs.
   shared_preferences: ^2.3.2
-
+  # provides API to store data in secure storage. Keychain is used in iOS, KeyStore based solution is used in Android.
+  flutter_secure_storage: ^9.2.2
   # Localization
   easy_localization:
   intl:
