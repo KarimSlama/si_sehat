@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_response.dart';
 import 'package:si_sehat/core/networking/api_error_handler.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/data/models/specialization_response.dart';
 
 part 'specialization_state.freezed.dart';
 
@@ -8,12 +8,23 @@ part 'specialization_state.freezed.dart';
 class SpecializationState<T> with _$SpecializationState<T> {
   const factory SpecializationState.initial() = _Initial;
 
+  /// Specialization
   const factory SpecializationState.specializationLoading() =
       SpecializationLoading;
 
   const factory SpecializationState.specializationSuccess(
-      SpecializationResponse specializationResponse) = SpecializationSuccess;
+      List<SpecializationData>? specializationDataList) = SpecializationSuccess;
 
   const factory SpecializationState.specializationError(
       ErrorHandler errorHandler) = SpecializationError;
+
+  /// Doctors
+  const factory SpecializationState.doctorsLoading() =
+  DoctorsLoading;
+
+  const factory SpecializationState.doctorsSuccess(List<Doctors?>? doctors) =
+      DoctorsSuccess;
+
+  const factory SpecializationState.doctorsError(ErrorHandler errorHandler) =
+      DoctorsError;
 }

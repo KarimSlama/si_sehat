@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/data/repo/specialization_repo.dart';
 import 'package:si_sehat/core/networking/register_api/api_service.dart';
 import 'package:si_sehat/core/networking/dio_factory.dart';
 import 'package:si_sehat/core/networking/specialization_and_doctors_api/specialization_api_service.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/data/repo/specialization_repo.dart';
 import 'package:si_sehat/si_sehat/screens/login/controller/login_cubit.dart';
 import 'package:si_sehat/si_sehat/screens/login/data/repo/login_repo.dart';
 import 'package:si_sehat/si_sehat/screens/register/controller/register_cubit.dart';

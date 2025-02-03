@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:icon_broken/icon_broken.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_model.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_response.dart';
 import 'package:si_sehat/core/helpers/separator.dart';
 import 'package:si_sehat/core/helpers/spacing.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/data/models/specialization_model.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/data/models/specialization_response.dart';
 
 class SeeMoreSpecializationListWidget extends StatelessWidget {
   final List<SpecializationData?> specializationDataList;

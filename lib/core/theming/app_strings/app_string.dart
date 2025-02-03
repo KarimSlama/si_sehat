@@ -54,6 +54,7 @@ class AppString {
   static const String mayYouAlwaysInAGoodCondition =
       'May you always in a good condition';
   static const String symptomsDiseases = 'symptoms, diseases...';
+  static const String searchDoctors = 'Search Doctors';
   static const String hi = 'Hi';
   static const String bookAnAppointment = 'Book an Appointment';
   static const String findADoctorOrSpecialist = 'Find a Doctor or specialist';

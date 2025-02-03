@@ -6,8 +6,8 @@ import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
 import 'package:si_sehat/core/widgets/text_form_widget.dart';
 
-class SearchAndFilterWidget extends StatelessWidget {
-  const SearchAndFilterWidget({super.key});
+class DoctorsSearchAndFilterWidget extends StatelessWidget {
+  const DoctorsSearchAndFilterWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SearchAndFilterWidget extends StatelessWidget {
           width: 280.w,
           height: 50.h,
           inputType: TextInputType.text,
-          hint: AppString.symptomsDiseases,
+          hint: AppString.searchDoctors,
           controller: searchController,
           prefixIcon: IconBroken.Search,
         ),

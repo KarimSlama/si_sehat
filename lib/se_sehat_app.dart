@@ -19,8 +19,7 @@ class AppointmentApp extends StatelessWidget {
       child: MaterialApp(
         title: AppString.appTitle,
         debugShowCheckedModeBanner: false,
-        initialRoute:
-            isLoggedUser ? Routes.homeScreen : Routes.registerFirstPageScreen,
+        initialRoute: isLoggedUser ? Routes.homeScreen : Routes.loginScreen,
         onGenerateRoute: appRouter.generateRoute,
         theme: themeLight,
       ),

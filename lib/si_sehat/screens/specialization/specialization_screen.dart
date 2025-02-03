@@ -4,8 +4,8 @@ import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/helpers/spacing.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/widgets/specialization_bloc_builder.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/widgets/search_and_filter_widget.dart';
+import 'package:si_sehat/core/widgets/search_and_filter_widget.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/widgets/specialization_bloc_builder.dart';
 
 class SpecializationScreen extends StatelessWidget {
   const SpecializationScreen({super.key});

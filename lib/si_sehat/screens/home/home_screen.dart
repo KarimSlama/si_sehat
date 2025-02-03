@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:icon_broken/icon_broken.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:si_sehat/core/helpers/app_constants.dart';
-import 'package:si_sehat/core/helpers/shared_preference.dart';
 import 'package:si_sehat/core/helpers/spacing.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
+import 'package:si_sehat/core/widgets/search_and_filter_widget.dart';
 import 'package:si_sehat/si_sehat/screens/home/widget/grid_view_selections_widet.dart';
 import 'package:si_sehat/si_sehat/screens/home/widget/promoted_card_page_view_widget.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/widgets/search_and_filter_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

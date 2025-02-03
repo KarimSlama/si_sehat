@@ -1,9 +1,23 @@
+class DoctorsImage {
+  final String image;
+
+  DoctorsImage({required this.image});
+}
+
+List<DoctorsImage> doctorsImage = [
+  DoctorsImage(image: 'assets/images/doctor1.png'),
+  DoctorsImage(image: 'assets/images/doctor2.png'),
+  DoctorsImage(image: 'assets/images/doctor3.png'),
+  DoctorsImage(image: 'assets/images/doctor4.png'),
+  DoctorsImage(image: 'assets/images/doctor5.png'),
+  DoctorsImage(image: 'assets/images/doctor5.png'),
+  DoctorsImage(image: 'assets/images/doctor3.png'),
+];
+
 class SpecializationModel {
   final String icon;
 
-  SpecializationModel({
-    required this.icon,
-  });
+  SpecializationModel({required this.icon});
 }
 
 List<SpecializationModel> specialization = [
