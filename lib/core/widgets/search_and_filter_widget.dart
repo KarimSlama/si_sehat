@@ -13,6 +13,7 @@ class SearchAndFilterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController searchController = TextEditingController();
     return Row(
+      spacing: 13.w,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AppTextForm(
@@ -24,7 +25,6 @@ class SearchAndFilterWidget extends StatelessWidget {
           controller: searchController,
           prefixIcon: IconBroken.Search,
         ),
-        horizontalSpace(13),
         IconButton(
             onPressed: () {},
             icon: Icon(

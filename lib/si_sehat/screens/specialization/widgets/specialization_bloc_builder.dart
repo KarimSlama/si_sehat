@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/controller/specialization_cubit.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/controller/specialization_state.dart';
 import 'package:si_sehat/core/theming/app_colors/app_colors.dart';
-import 'package:si_sehat/si_sehat/screens/book_an_appointment/widgets/specialization_list_widget.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/controller/specialization_cubit.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/controller/specialization_state.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/widgets/specialization_list_widget.dart';
 
 class SpecializationBlocBuilder extends StatelessWidget {
   const SpecializationBlocBuilder({super.key});
@@ -20,7 +20,7 @@ class SpecializationBlocBuilder extends StatelessWidget {
           return state.maybeWhen(
             specializationLoading: () => setupLoading(),
             specializationSuccess: (specializationResponse) =>
-                setupSuccess(specializationResponse.specializationDataList),
+                setupSuccess(specializationResponse),
             specializationError: (errorHandler) => Text(
                 ' errorHandler.apiErrorModel.message ${errorHandler.apiErrorModel.message}'),
             orElse: () {
@@ -32,8 +32,7 @@ class SpecializationBlocBuilder extends StatelessWidget {
 }
 
 Widget setupSuccess(specializationList) {
-  return SpecializationListWidget(
-      specializationDataList: specializationList ?? []);
+  return SpecializationListWidget(specializationData: specializationList ?? []);
 }
 
 Widget setupLoading() => SpinKitSquareCircle(color: AppColors.blue);

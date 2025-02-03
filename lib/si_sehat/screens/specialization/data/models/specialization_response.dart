@@ -33,6 +33,7 @@ class Doctors {
   String? email;
   String? phone;
   String? gender;
+  String? photo;
   String? address;
   String? description;
   String? degree;
@@ -42,6 +43,8 @@ class Doctors {
   String? startTime;
   @JsonKey(name: 'end_time')
   String? endTime;
+ @JsonKey(name: 'specialization')
+  Specialization? specialization;
 
   Doctors({
     this.id,
@@ -50,13 +53,28 @@ class Doctors {
     this.phone,
     this.gender,
     this.address,
+    this.photo,
     this.description,
     this.degree,
     this.appointPrice,
     this.startTime,
     this.endTime,
+    this.specialization,
   });
 
   factory Doctors.fromJson(Map<String, dynamic> json) =>
       _$DoctorsFromJson(json);
+}
+
+@JsonSerializable()
+class Specialization {
+  int? id;
+  String? name;
+
+  Specialization({
+    this.id, this.name,
+  });
+
+ factory Specialization.fromJson(Map<String, dynamic> json) =>
+      _$SpecializationFromJson(json);
 }

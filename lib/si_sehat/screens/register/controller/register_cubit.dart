@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:si_sehat/core/helpers/app_constants.dart';
 import 'package:si_sehat/core/helpers/shared_preference.dart';
+import 'package:si_sehat/core/networking/dio_factory.dart';
 import 'package:si_sehat/si_sehat/screens/register/controller/register_state.dart';
 import 'package:si_sehat/si_sehat/screens/register/data/models/register_request_body.dart';
 import 'package:si_sehat/si_sehat/screens/register/data/repo/register_rep.dart';
@@ -42,7 +43,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   }
 
   Future<void> saveUserToke(token) async {
-    await SharedPreference.setSecureString(
-        SharedPreferenceKey.userTokenKey, token);
+    await SharedPreference.setData(SharedPreferenceKey.userTokenKey, token);
+    DioFactory.setTokenIntoHeaderAfterLogin(token);
   }
 }

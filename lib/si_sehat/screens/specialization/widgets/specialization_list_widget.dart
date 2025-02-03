@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:icon_broken/icon_broken.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_model.dart';
-import 'package:si_sehat/core/book_appointments_and_doctors/data/models/specialization_response.dart';
 import 'package:si_sehat/core/helpers/extensions.dart';
 import 'package:si_sehat/core/helpers/separator.dart';
 import 'package:si_sehat/core/helpers/spacing.dart';
 import 'package:si_sehat/core/routing/routes.dart';
 import 'package:si_sehat/core/theming/app_strings/app_string.dart';
-import 'package:si_sehat/si_sehat/screens/register_info_first_page/register_first_page_screen.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/controller/specialization_cubit.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/data/models/specialization_model.dart';
+import 'package:si_sehat/si_sehat/screens/specialization/data/models/specialization_response.dart';
 
 class SpecializationListWidget extends StatelessWidget {
-  final List<SpecializationData?> specializationDataList;
-
-  const SpecializationListWidget(
-      {super.key, required this.specializationDataList});
+  final List<SpecializationData> specializationData;
+  const SpecializationListWidget({super.key, required this.specializationData});
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +37,7 @@ class SpecializationListWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      specializationDataList[index]?.name ??
-                          'Ear, Nose & Throat',
+                      specializationData[index].name ?? 'Ear, Nose & Throat',
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium
@@ -60,7 +58,8 @@ class SpecializationListWidget extends StatelessWidget {
                 Spacer(),
                 IconButton(
                     onPressed: () {
-                      context.pushNamed(Routes.doctorsWithSpecializationScreen);
+                      context.pushNamed(Routes.doctorsWithSpecializationScreen,
+                          arguments: specializationData[index].doctorsList);
                     },
                     icon: Icon(
                       IconBroken.Arrow___Right_2,
@@ -70,9 +69,8 @@ class SpecializationListWidget extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) => separator(),
-        itemCount: specializationDataList.length < 4
-            ? specializationDataList.length
-            : 4,
+        itemCount:
+            specializationData.length < 4 ? specializationData.length : 4,
       ),
     );
   }

@@ -20,9 +20,9 @@ void main() async {
 }
 
 checkIfLoggedInUser() async {
-  String userToken = await SharedPreference.getSecureString(
-          SharedPreferenceKey.userTokenKey) ??
-      '';
+  String userToken = await SharedPreference.getString(
+          SharedPreferenceKey.userTokenKey);
+  print('User token in Main Development is $userToken');
   if (!userToken.isNullOrEmpty()) {
     isLoggedUser = true;
   } else {
